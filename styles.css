@@ -1,0 +1,33 @@
+#area {
+}
+
+#keyboard {
+  background-color: #004134;
+  text-align: center;
+  line-height: 25px;
+  max-width: 700px;
+  padding: 3px;
+  display: none;
+}
+
+#keyboard.active {
+  display: block;
+}
+
+#keyboard.uppercase #key-shift {
+  background-color: #7bb2a4;
+}
+
+.keyboard_line {
+  display: flex;
+}
+
+#keyboard button {
+  background-color: #3c675c;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  padding: 4px 10px;
+  flex: auto;
+  margin: 2px;
+}
