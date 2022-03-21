@@ -20,6 +20,13 @@
 
 .keyboard_line {
   display: flex;
+  justify-content: center;
+}
+
+.keyboard_line:nth-child(2),
+.keyboard_line:nth-child(4) {
+  margin-right: 18px;
+  margin-left: 18px;
 }
 
 #keyboard button {
@@ -35,4 +42,8 @@
 #keyboard button img {
   max-height: 16px;
   margin-bottom: -4px;
+}
+
+#keyboard #key-space {
+  max-width: 55%;
 }
