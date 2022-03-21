@@ -31,3 +31,8 @@
   flex: auto;
   margin: 2px;
 }
+
+#keyboard button img {
+  max-height: 16px;
+  margin-bottom: -4px;
+}

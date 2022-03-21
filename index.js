@@ -29,6 +29,9 @@ Object.prototype.on = function (event, cb) {
 const keyboard = $("#keyboard");
 
 let isUpperCaseMode = false;
+/**
+ * Allows to build or rebuild the keyboard interface
+ */
 function buildKeyboard() {
   keyboard.innerHTML = "";
   if (isUpperCaseMode) {
@@ -49,10 +52,14 @@ function buildKeyboard() {
     line.classList.add("keyboard_line");
     keyLine.forEach((key) => {
       const button = document.createElement("button");
-      if (isUpperCaseMode && key.length === 1) {
-        button.innerHTML = String(key).toUpperCase();
+
+      const isChar = key.length === 1;
+      if (isChar) {
+        button.innerHTML = isUpperCaseMode ? String(key).toUpperCase() : key;
       } else {
-        button.innerHTML = key;
+        const img = document.createElement("img");
+        img.src = `./img/${key}.png`;
+        button.appendChild(img);
       }
       button.id = `key-${key}`;
       line.appendChild(button);
@@ -86,7 +93,6 @@ function insertInput() {
       area.value += " ";
       break;
     case "key-shift":
-      console.log(isUpperCaseMode);
       isUpperCaseMode = !isUpperCaseMode;
       buildKeyboard();
       break;
