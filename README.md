@@ -11,4 +11,4 @@
 ## what is not handled
 
 - There is no cursor management yet
-- The shift status icon does not entirely color switch
+- The shift status icon does not entirely color switch.
